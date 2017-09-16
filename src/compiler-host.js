@@ -352,6 +352,7 @@ export default class CompilerHost {
       result.mimeType === 'text/html';
 
     let isPassthrough =
+      result.mimeType === 'application/xml' ||
       result.mimeType === 'text/plain' ||
       !result.mimeType ||
       CompilerHost.shouldPassthrough(hashInfo);
@@ -595,6 +596,7 @@ export default class CompilerHost {
       result.mimeType === 'text/html';
 
     let isPassthrough =
+      result.mimeType === 'application/xml' ||
       result.mimeType === 'text/plain' ||
       !result.mimeType ||
       CompilerHost.shouldPassthrough(hashInfo);
